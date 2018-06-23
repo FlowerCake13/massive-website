@@ -1,0 +1,41 @@
+body{
+	margin: 0;
+	font-family: 'Barlow', sans-serif;
+}
+
+.header{
+	overflow: hidden;
+	background-color: #333;
+	width: calc(100vw);
+}
+
+.header_element{
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.header_element-hover:hover{
+	background-color: #ddd;
+	color: black;
+}
+
+.header_element-active:active{
+	background-color: #4cafa1;
+	color: white;
+}
+
+.footer{
+	background-color: #333;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-size: 17px;
+	position: fixed;
+	bottom: 0;
+	width: calc(100vw);
+}
