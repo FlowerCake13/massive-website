@@ -28,6 +28,11 @@ body{
 	color: white;
 }
 
+.header_element-selected{
+	background-color: #ddd;
+	color: black;
+}
+
 .footer{
 	background-color: #333;
 	color: white;
