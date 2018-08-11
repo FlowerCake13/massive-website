@@ -47,6 +47,50 @@ body{
 }
 
 /*GALLERY THINGS*/
+#catchemall-container{
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: center;
+}
+
+#catchemall-text{
+	height: 100%;
+	width: auto;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+#catchemall{
+	height: 50%;
+	width: 50%;
+	margin: 10px;
+}
+
+#characterpuzzle-container{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+#characterpuzzle-text{
+	height: 100%;
+	width: auto;
+	margin-left: 10px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+#characterpuzzle{
+	height: 50%;
+	width: 50%;
+	margin: 10px;
+}
+
 #fireflies-container{
 	width: 100%;
 	display: flex;
