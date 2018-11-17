@@ -1,51 +1,133 @@
-var input = document.getElementById('input');
-var btn = document.getElementById('btn');
-var comments = document.getElementById('comments')
-var counter = localStorage.length;
+var love = document.getElementById('l-indsay');
+var inspire = document.getElementById('l-i-ndsay');
+var nice = document.getElementById('li-n-dsay');
+var dare = document.getElementById('lin-d-say');
+var special = document.getElementById('lind-s-ay');
+var amaze = document.getElementById('linds-a-y');
+var yes = document.getElementById('lindsa-y');
 
+love.addEventListener('click', function(){
+	// console.log('test')
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', "http://api.giphy.com/v1/gifs/search?q=l&api_key=SFvhAK7TNBL8XH6P7n9Y3gYXA1S3LbTb&limit=1");
+	xhr.send();
+	xhr.addEventListener("readystatechange", processReq, false);
 
-
-function ohNo(com, datetime){
-	this.comment = com;
-	this.current = datetime;
-}
-
-btn.addEventListener('click', function(){
-	if (input.value != '') {
-		var div = document.createElement('div');
-		var text = document.createElement('p');
-		var time = document.createElement('p')
-		div.setAttribute('class', 'comment')
-		text.innerHTML = input.value;
-		div.appendChild(text);
-		var date = new Date()
-		time.innerHTML = date;
-		div.appendChild(time);
-		comments.appendChild(div)
-
-		var one = new ohNo(input.value, date);
-		var two = JSON.stringify(one);
-		console.log(two)
-		localStorage.setItem(counter, two)
-
-		//console.log(input.value)
-		input.value = ''
-		counter++
-		console.log(localStorage.length)
-	} else {
-		alert('nothing there!')
+	function processReq(e){
+		//console.log(JSON.parse(xhr.response).data)
+			for (var i = 0; i < JSON.parse(xhr.response).data.length; i++) {
+				//console.log(JSON.parse(xhr.response).data[i].url)
+				var gif = document.createElement('iframe')
+				gif.src = JSON.parse(xhr.response).data[i].embed_url
+				love.appendChild(gif)
+			}
 	}
 })
 
-for (var i = 0; i < localStorage.length; i++){
-	var div	= document.createElement('div');
-	var text = document.createElement('p');
-	var time = document.createElement('p');
-	var parsed = JSON.parse(localStorage.getItem(localStorage.key(i)));
-	div.setAttribute('class', 'comment')
-	text.innerHTML = parsed.comment;
-	div.appendChild(text);
-	time.innerHTML = parsed.current
-	div.appendChild(time);
-	comments.appendChild(div)
-}
+inspire.addEventListener('click', function(){
+	// console.log('test')
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', "http://api.giphy.com/v1/gifs/search?q=i&api_key=SFvhAK7TNBL8XH6P7n9Y3gYXA1S3LbTb&limit=1");
+	xhr.send();
+	xhr.addEventListener("readystatechange", processReq, false);
+
+	function processReq(e){
+		//console.log(JSON.parse(xhr.response).data)
+			for (var i = 0; i < JSON.parse(xhr.response).data.length; i++) {
+				//console.log(JSON.parse(xhr.response).data[i].url)
+				var gif = document.createElement('iframe')
+				gif.src = JSON.parse(xhr.response).data[i].embed_url
+				inspire.appendChild(gif)
+			}
+	}
+})
+
+nice.addEventListener('click', function(){
+	// console.log('test')
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', "http://api.giphy.com/v1/gifs/search?q=n&api_key=SFvhAK7TNBL8XH6P7n9Y3gYXA1S3LbTb&limit=1");
+	xhr.send();
+	xhr.addEventListener("readystatechange", processReq, false);
+
+	function processReq(e){
+		//console.log(JSON.parse(xhr.response).data)
+			for (var i = 0; i < JSON.parse(xhr.response).data.length; i++) {
+				//console.log(JSON.parse(xhr.response).data[i].url)
+				var gif = document.createElement('iframe')
+				gif.src = JSON.parse(xhr.response).data[i].embed_url
+				nice.appendChild(gif)
+			}
+	}
+})
+
+dare.addEventListener('click', function(){
+	// console.log('test')
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', "http://api.giphy.com/v1/gifs/search?q=d&api_key=SFvhAK7TNBL8XH6P7n9Y3gYXA1S3LbTb&limit=1");
+	xhr.send();
+	xhr.addEventListener("readystatechange", processReq, false);
+
+	function processReq(e){
+		//console.log(JSON.parse(xhr.response).data)
+			for (var i = 0; i < JSON.parse(xhr.response).data.length; i++) {
+				//console.log(JSON.parse(xhr.response).data[i].url)
+				var gif = document.createElement('iframe')
+				gif.src = JSON.parse(xhr.response).data[i].embed_url
+				dare.appendChild(gif)
+			}
+	}
+})
+
+special.addEventListener('click', function(){
+	// console.log('test')
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', "http://api.giphy.com/v1/gifs/search?q=s&api_key=SFvhAK7TNBL8XH6P7n9Y3gYXA1S3LbTb&limit=1");
+	xhr.send();
+	xhr.addEventListener("readystatechange", processReq, false);
+
+	function processReq(e){
+		//console.log(JSON.parse(xhr.response).data)
+			for (var i = 0; i < JSON.parse(xhr.response).data.length; i++) {
+				//console.log(JSON.parse(xhr.response).data[i].url)
+				var gif = document.createElement('iframe')
+				gif.src = JSON.parse(xhr.response).data[i].embed_url
+				special.appendChild(gif)
+			}
+	}
+})
+
+amaze.addEventListener('click', function(){
+	// console.log('test')
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', "http://api.giphy.com/v1/gifs/search?q=a&api_key=SFvhAK7TNBL8XH6P7n9Y3gYXA1S3LbTb&limit=1");
+	xhr.send();
+	xhr.addEventListener("readystatechange", processReq, false);
+
+	function processReq(e){
+		//console.log(JSON.parse(xhr.response).data)
+			for (var i = 0; i < JSON.parse(xhr.response).data.length; i++) {
+				//console.log(JSON.parse(xhr.response).data[i].url)
+				var gif = document.createElement('iframe')
+				gif.src = JSON.parse(xhr.response).data[i].embed_url
+				amaze.appendChild(gif)
+			}
+	}
+})
+
+yes.addEventListener('click', function(){
+	// console.log('test')
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', "http://api.giphy.com/v1/gifs/search?q=y&api_key=SFvhAK7TNBL8XH6P7n9Y3gYXA1S3LbTb&limit=1");
+	xhr.send();
+	xhr.addEventListener("readystatechange", processReq, false);
+
+	function processReq(e){
+		//console.log(JSON.parse(xhr.response).data)
+			for (var i = 0; i < JSON.parse(xhr.response).data.length; i++) {
+				//console.log(JSON.parse(xhr.response).data[i].url)
+				var gif = document.createElement('iframe')
+				gif.src = JSON.parse(xhr.response).data[i].embed_url
+				yes.appendChild(gif)
+			}
+	}
+})

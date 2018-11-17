@@ -3,7 +3,7 @@ var btn = document.getElementById('btn');
 var comments = document.getElementById('comments')
 var counter = localStorage.length;
 
-
+localStorage.clear()
 
 function ohNo(com, datetime){
 	this.comment = com;

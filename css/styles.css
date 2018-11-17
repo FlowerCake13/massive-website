@@ -43,7 +43,29 @@ body{
 	font-size: 17px;
 	position: fixed;
 	bottom: 0;
+	height: 54px;
 	width: calc(100vw);
+}
+
+/*HOME PAGE THINGS*/
+#name-container{
+	width: 100%;
+	height: calc(100vh - 102px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#name{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.spell{
+	font-size: 100px;
+	margin-left: 15px;
 }
 
 /*GALLERY THINGS*/
