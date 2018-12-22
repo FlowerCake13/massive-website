@@ -212,3 +212,23 @@ body{
 	width: 250px;
 	height: 250px;
 }
+
+/*MOVIE THINGS*/
+ #movie-container{
+ 	text-align: center;
+ 	width: 100%;
+	height: calc(100vh - 102px);
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	flex-direction: column;
+ }
+
+ #inputsearch{
+ 	display: flex;
+ 	flex-direction: row;
+ }
+
+ #input{
+ 	margin-right: 7px;
+ }
